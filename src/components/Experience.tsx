@@ -64,29 +64,25 @@ const Experience = () => {
           {experiences.map((exp, index) => (
             <div
               key={index}
-              className="experience-item gradient-border rounded-2xl p-8 hover:scale-105 transition-all duration-500 group relative overflow-hidden cursor-pointer"
+              className="experience-item gradient-border rounded-2xl p-8 hover:scale-105 transition-transform duration-300"
               style={{ 
                 opacity: 0,
                 animation: `fadeIn 0.8s ease-out ${index * 0.2}s forwards`
               }}
             >
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/0 via-primary/5 to-secondary/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000" />
-              <div className="relative z-10">
-                <h3 className="text-2xl font-bold mb-4 gradient-text group-hover:scale-105 transition-transform duration-300">
-                  {exp.title}
-                </h3>
-                <p className="text-muted-foreground mb-6">{exp.description}</p>
-                <div className="flex flex-wrap gap-2">
-                  {exp.technologies.map((tech) => (
-                    <span
-                      key={tech}
-                      className="px-3 py-1 rounded-full text-sm font-medium glass hover:bg-primary/20 transition-colors"
-                    >
-                      {tech}
-                    </span>
-                  ))}
-                </div>
+              <h3 className="text-2xl font-bold mb-4 gradient-text">
+                {exp.title}
+              </h3>
+              <p className="text-muted-foreground mb-6">{exp.description}</p>
+              <div className="flex flex-wrap gap-2">
+                {exp.technologies.map((tech) => (
+                  <span
+                    key={tech}
+                    className="px-3 py-1 rounded-full text-sm font-medium glass"
+                  >
+                    {tech}
+                  </span>
+                ))}
               </div>
             </div>
           ))}
