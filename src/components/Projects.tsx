@@ -64,7 +64,11 @@ const Projects = () => {
           {projects.map((project, index) => (
             <div
               key={index}
-              className="project-card opacity-0 group relative overflow-hidden rounded-2xl"
+              className="project-card group relative overflow-hidden rounded-2xl"
+              style={{ 
+                opacity: 0,
+                animation: `slideUp 0.8s ease-out ${index * 0.15}s forwards`
+              }}
             >
               <div className="glass p-8 h-full transition-all duration-300 hover:bg-white/10">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary/30 to-secondary/30 rounded-bl-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-500" />

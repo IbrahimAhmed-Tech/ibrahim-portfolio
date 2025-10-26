@@ -64,7 +64,11 @@ const Experience = () => {
           {experiences.map((exp, index) => (
             <div
               key={index}
-              className="experience-item opacity-0 gradient-border rounded-2xl p-8 hover:scale-105 transition-transform duration-300"
+              className="experience-item gradient-border rounded-2xl p-8 hover:scale-105 transition-transform duration-300"
+              style={{ 
+                opacity: 0,
+                animation: `fadeIn 0.8s ease-out ${index * 0.2}s forwards`
+              }}
             >
               <h3 className="text-2xl font-bold mb-4 gradient-text">
                 {exp.title}

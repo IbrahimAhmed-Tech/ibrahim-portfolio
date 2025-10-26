@@ -23,7 +23,15 @@ const Contact = () => {
   }, []);
 
   return (
-    <section id="contact" ref={contactRef} className="py-20 px-4 opacity-0">
+    <section 
+      id="contact" 
+      ref={contactRef} 
+      className="py-20 px-4"
+      style={{ 
+        opacity: 0,
+        animation: 'fadeIn 0.8s ease-out 0.2s forwards'
+      }}
+    >
       <div className="container mx-auto max-w-4xl">
         <div className="gradient-border rounded-3xl p-12 text-center">
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
