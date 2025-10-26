@@ -57,12 +57,6 @@ const Contact = () => {
               View GitHub
             </a>
           </div>
-
-          <div className="mt-12 pt-8 border-t border-border">
-            <p className="text-muted-foreground">
-              Built with React, TypeScript, and Tailwind CSS
-            </p>
-          </div>
         </div>
       </div>
     </section>
