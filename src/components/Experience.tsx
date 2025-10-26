@@ -9,7 +9,7 @@ const experiences = [
   {
     title: "Cloud Infrastructure",
     description: "Architecting and deploying cloud-native applications on AWS with serverless and containerized solutions.",
-    technologies: ["AWS", "Lambda", "EC2", "S3"],
+    technologies: ["AWS", "Lambda", "EC2", "S3", 'RDS', 'VPC', 'Cognito'],
   },
   {
     title: "Mobile Development",
