@@ -50,7 +50,7 @@ const projects = [
   },
   {
     title: "ChatBot",
-    description: "Built REST APIs (Express) to support a platform that allows user to automatically backups photos from their devices to their local computer storage, ensuring secure and organized photo management.",
+    description: "An AI ChatBot that utilized Gemini API to provide intelligent responses to user queries, enhancing user engagement and support. The application is created using Laravel for backend management, Blade for templating, and MySQL for data storage.",
     stack: ["Laravel", "PHP", "Blade", "MySQL"],
     url: "https://github.com/Zyam-1/ChatBot"
   },
