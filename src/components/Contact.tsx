@@ -44,17 +44,19 @@ const Contact = () => {
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="mailto:your.email@example.com"
-              className="px-8 py-4 rounded-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold transition-all hover:scale-105"
+              className="group px-8 py-4 rounded-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold transition-all hover:scale-110 hover:shadow-lg hover:shadow-primary/50 relative overflow-hidden"
             >
-              Send Email
+              <span className="relative z-10">Send Email</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700" />
             </a>
             <a
               href="https://github.com/yourusername"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-4 rounded-full glass hover:bg-white/10 font-semibold transition-all hover:scale-105"
+              className="group px-8 py-4 rounded-full glass hover:bg-white/10 font-semibold transition-all hover:scale-110 hover:shadow-lg relative overflow-hidden"
             >
-              View GitHub
+              <span className="relative z-10">View GitHub</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700" />
             </a>
           </div>
 

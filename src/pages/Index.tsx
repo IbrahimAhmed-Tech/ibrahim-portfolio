@@ -2,8 +2,9 @@ import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import Skills from "@/components/Skills";
 import Experience from "@/components/Experience";
-import Projects from "@/components/Projects";
+import ProjectsCarousel from "@/components/ProjectsCarousel";
 import Contact from "@/components/Contact";
+import ScrollToTop from "@/components/ScrollToTop";
 
 const Index = () => {
   return (
@@ -12,8 +13,9 @@ const Index = () => {
       <Hero />
       <Skills />
       <Experience />
-      <Projects />
+      <ProjectsCarousel />
       <Contact />
+      <ScrollToTop />
     </div>
   );
 };

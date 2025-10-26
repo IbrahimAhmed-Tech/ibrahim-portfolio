@@ -63,10 +63,11 @@ const Skills = () => {
                 animation: `slideUp 0.8s ease-out ${index * 0.1}s forwards`
               }}
             >
-              <div className="glass rounded-2xl p-6 h-full transition-all duration-300 hover:scale-105 hover:bg-white/10">
+              <div className="glass rounded-2xl p-6 h-full transition-all duration-300 hover:scale-110 hover:bg-white/10 hover:shadow-lg hover:shadow-primary/20 cursor-pointer relative overflow-hidden">
                 <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/20 to-secondary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-700" />
                 <div className="relative z-10">
-                  <h3 className="text-lg font-semibold mb-2">{skill.name}</h3>
+                  <h3 className="text-lg font-semibold mb-2 group-hover:gradient-text transition-all duration-300">{skill.name}</h3>
                   <p className="text-sm text-muted-foreground">{skill.category}</p>
                 </div>
               </div>

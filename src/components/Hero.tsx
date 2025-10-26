@@ -29,8 +29,12 @@ const Hero = () => {
       className="min-h-screen flex items-center justify-center relative overflow-hidden"
     >
       {/* Animated gradient background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-background to-cyan-900/20" />
+      <div className="absolute inset-0 bg-gradient-to-br from-purple-900/20 via-background to-cyan-900/20 animate-gradient" />
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(99,102,241,0.1),transparent_50%)]" />
+      
+      {/* Floating orbs */}
+      <div className="absolute top-20 left-10 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-float" />
+      <div className="absolute bottom-20 right-10 w-96 h-96 bg-secondary/10 rounded-full blur-3xl animate-float" style={{ animationDelay: "1s" }} />
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center space-y-8">
@@ -50,15 +54,17 @@ const Hero = () => {
           <div className="flex flex-wrap gap-4 justify-center pt-8">
             <a
               href="#contact"
-              className="px-8 py-3 rounded-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold transition-all hover:scale-105"
+              className="group px-8 py-3 rounded-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold transition-all hover:scale-110 hover:shadow-lg hover:shadow-primary/50 relative overflow-hidden"
             >
-              Get in Touch
+              <span className="relative z-10">Get in Touch</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000" />
             </a>
             <a
               href="#projects"
-              className="px-8 py-3 rounded-full glass hover:bg-white/10 text-foreground font-semibold transition-all hover:scale-105"
+              className="group px-8 py-3 rounded-full glass hover:bg-white/10 text-foreground font-semibold transition-all hover:scale-110 hover:shadow-lg relative overflow-hidden"
             >
-              View Projects
+              <span className="relative z-10">View Projects</span>
+              <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent translate-x-[-200%] group-hover:translate-x-[200%] transition-transform duration-1000" />
             </a>
           </div>
         </div>
