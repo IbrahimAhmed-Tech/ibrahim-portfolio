@@ -43,13 +43,13 @@ const Contact = () => {
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="mailto:your.email@example.com"
+              href="mailto:zyamm7@gmail.com"
               className="px-8 py-4 rounded-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold transition-all hover:scale-105"
             >
               Send Email
             </a>
             <a
-              href="https://github.com/yourusername"
+              href="https://github.com/Zyam-1"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 rounded-full glass hover:bg-white/10 font-semibold transition-all hover:scale-105"

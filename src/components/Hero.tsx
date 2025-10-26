@@ -34,17 +34,18 @@ const Hero = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="max-w-4xl mx-auto text-center space-y-8">
-          <h1 className="text-5xl md:text-7xl font-bold leading-tight">
-            <span className="block mb-4">Hi, I'm a</span>
-            <span className="gradient-text animate-float">
-              Full Stack Developer
+          <h1 className="font-bold leading-tight">
+            <span className="block text-2xl md:text-3xl mb-2 text-muted-foreground">Hi, I'm</span>
+            <span className="block text-5xl md:text-7xl font-extrabold tracking-tight bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
+              Zyam Maqsood
             </span>
+            <span className="block mt-2 text-xl md:text-2xl text-muted-foreground">Full Stack Developer</span>
           </h1>
-          
+
           <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto">
-            Crafting scalable web applications with MERN stack, cloud solutions with AWS, 
-            and mobile experiences with React Native. Specialized in building robust backend 
-            systems with Laravel, PHP, and SQL databases.
+            Crafting scalable web applications with the MERN stack, cloud solutions on AWS,
+            and mobile experiences with React Native. I also build robust backend systems
+            using Laravel, PHP, and SQL databases.
           </p>
 
           <div className="flex flex-wrap gap-4 justify-center pt-8">
