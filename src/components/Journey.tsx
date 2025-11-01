@@ -84,7 +84,7 @@ const Journey = () => {
 
         <div className="relative">
           {/* Animated timeline line */}
-          <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-border md:-ml-px">
+          <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-border md:-ml-px">
             <div
               className="absolute top-0 left-0 w-full bg-gradient-to-b from-primary via-primary to-transparent transition-all duration-300 ease-out"
               style={{ height: `${progress}%` }}
@@ -112,25 +112,25 @@ const Journey = () => {
                 </div>
 
                 {/* Timeline dot */}
-                <div className="absolute left-8 md:left-1/2 w-4 h-4 bg-primary rounded-full border-4 border-background md:-ml-2 z-10 hover:scale-150 transition-transform duration-300" />
+                <div className="absolute left-4 md:left-1/2 w-3 h-3 md:w-4 md:h-4 bg-primary rounded-full border-2 md:border-4 border-background md:-ml-2 z-10 hover:scale-150 transition-transform duration-300" />
 
                 {/* Right side (content) */}
-                <div className={`ml-20 md:ml-0 ${index % 2 === 0 ? 'md:order-2 md:pl-12' : 'pr-12'}`}>
-                  <div className="gradient-border rounded-2xl p-6 hover:scale-105 transition-all duration-300 group">
+                <div className={`pl-10 md:pl-0 md:ml-0 ${index % 2 === 0 ? 'md:order-2 md:pl-12' : 'md:pr-12'}`}>
+                  <div className="gradient-border rounded-xl md:rounded-2xl p-4 md:p-6 hover:scale-105 transition-all duration-300 group min-h-[180px] md:min-h-0 flex flex-col">
                     {/* Mobile year */}
-                    <span className="md:hidden text-3xl font-bold gradient-text block mb-2">
+                    <span className="md:hidden text-2xl font-bold gradient-text block mb-3">
                       {item.year}
                     </span>
                     
-                    <div className="flex items-start gap-4">
-                      <div className="p-3 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors duration-300">
-                        <item.icon className="w-6 h-6 text-primary group-hover:scale-125 transition-transform duration-300" />
+                    <div className="flex items-start gap-3 md:gap-4 flex-1">
+                      <div className="p-2 md:p-3 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors duration-300 shrink-0">
+                        <item.icon className="w-5 h-5 md:w-6 md:h-6 text-primary group-hover:scale-125 transition-transform duration-300" />
                       </div>
-                      <div className="flex-1">
-                        <h3 className="text-2xl font-bold mb-2 group-hover:gradient-text transition-all duration-300">
+                      <div className="flex-1 min-w-0">
+                        <h3 className="text-lg md:text-2xl font-bold mb-1 md:mb-2 group-hover:gradient-text transition-all duration-300">
                           {item.title}
                         </h3>
-                        <p className="text-muted-foreground">
+                        <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
                           {item.description}
                         </p>
                       </div>
