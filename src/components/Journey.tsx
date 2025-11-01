@@ -8,39 +8,33 @@ const journeyData: Array<{
   icon: LucideIcon;
 }> = [
   {
-    year: "2024",
-    title: "Full Stack Excellence",
-    description: "Mastering modern cloud architectures and leading complex full-stack projects with AWS and microservices.",
-    icon: Rocket,
-  },
-  {
-    year: "2023",
-    title: "Cloud Native Development",
-    description: "Specialized in serverless architectures, containerization, and scalable cloud solutions on AWS.",
-    icon: Cloud,
-  },
-  {
-    year: "2022",
-    title: "Mobile Development",
-    description: "Expanded expertise to cross-platform mobile development with React Native and Expo.",
+    year: "2025",
+    title: "Mobile & Cloud Development",
+    description: "Started working on React Native, AWS and relevant cloud technologies, expanding into cross-platform mobile development.",
     icon: Smartphone,
   },
   {
-    year: "2021",
-    title: "Backend Engineering",
-    description: "Deepened backend skills with Laravel, PHP, and advanced database management systems.",
-    icon: Settings,
-  },
-  {
-    year: "2020",
-    title: "MERN Stack Developer",
-    description: "Built robust web applications using MongoDB, Express, React, and Node.js stack.",
+    year: "2024",
+    title: "Desktop Application Development",
+    description: "Started working on VB6 and VB.NET, building enterprise desktop applications and Windows-based solutions.",
     icon: Code,
   },
   {
-    year: "2019",
+    year: "2023 March",
+    title: "First Professional Role",
+    description: "Joined my first job and started working on PHP Laravel and SQL Server, diving into enterprise backend development.",
+    icon: Rocket,
+  },
+  {
+    year: "2023 Jan",
+    title: "MERN Stack Developer",
+    description: "Started working on MERN stack (MongoDB, Express, React, Node.js), building full-stack web applications.",
+    icon: Settings,
+  },
+  {
+    year: "2022",
     title: "Started the Journey",
-    description: "Began professional development career, learning fundamentals and building first projects.",
+    description: "Began with C++ programming, learning fundamentals and building a strong foundation in software development.",
     icon: Sprout,
   },
 ];
