@@ -1,41 +1,47 @@
 import { useEffect, useRef, useState } from "react";
+import { Rocket, Cloud, Smartphone, Settings, Code, Sprout, LucideIcon } from "lucide-react";
 
-const journeyData = [
+const journeyData: Array<{
+  year: string;
+  title: string;
+  description: string;
+  icon: LucideIcon;
+}> = [
   {
     year: "2024",
     title: "Full Stack Excellence",
     description: "Mastering modern cloud architectures and leading complex full-stack projects with AWS and microservices.",
-    icon: "🚀",
+    icon: Rocket,
   },
   {
     year: "2023",
     title: "Cloud Native Development",
     description: "Specialized in serverless architectures, containerization, and scalable cloud solutions on AWS.",
-    icon: "☁️",
+    icon: Cloud,
   },
   {
     year: "2022",
     title: "Mobile Development",
     description: "Expanded expertise to cross-platform mobile development with React Native and Expo.",
-    icon: "📱",
+    icon: Smartphone,
   },
   {
     year: "2021",
     title: "Backend Engineering",
     description: "Deepened backend skills with Laravel, PHP, and advanced database management systems.",
-    icon: "⚙️",
+    icon: Settings,
   },
   {
     year: "2020",
     title: "MERN Stack Developer",
     description: "Built robust web applications using MongoDB, Express, React, and Node.js stack.",
-    icon: "💻",
+    icon: Code,
   },
   {
     year: "2019",
     title: "Started the Journey",
     description: "Began professional development career, learning fundamentals and building first projects.",
-    icon: "🌱",
+    icon: Sprout,
   },
 ];
 
@@ -123,9 +129,9 @@ const Journey = () => {
                     </span>
                     
                     <div className="flex items-start gap-4">
-                      <span className="text-4xl group-hover:scale-125 transition-transform duration-300">
-                        {item.icon}
-                      </span>
+                      <div className="p-3 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors duration-300">
+                        <item.icon className="w-6 h-6 text-primary group-hover:scale-125 transition-transform duration-300" />
+                      </div>
                       <div className="flex-1">
                         <h3 className="text-2xl font-bold mb-2 group-hover:gradient-text transition-all duration-300">
                           {item.title}
