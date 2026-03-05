@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { navigationLinks, personalInfo, navigationContent } from "@/content";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -12,14 +13,6 @@ const Navigation = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const navLinks = [
-    { href: "#home", label: "Home" },
-    { href: "#skills", label: "Skills" },
-    { href: "#experience", label: "Experience" },
-    { href: "#projects", label: "Projects" },
-    { href: "#contact", label: "Contact" },
-  ];
-
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -29,11 +22,11 @@ const Navigation = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
           <a href="#home" className="text-xl font-bold gradient-text">
-            Portfolio
+            {personalInfo.portfolioTitle}
           </a>
 
           <div className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
+            {navigationLinks.map((link) => (
               <a
                 key={link.href}
                 href={link.href}
@@ -45,10 +38,10 @@ const Navigation = () => {
           </div>
 
           <a
-            href="#contact"
+            href={navigationContent.hireMeHref}
             className="hidden md:block px-6 py-2 rounded-full glass hover:bg-white/10 font-semibold transition-all hover:scale-105"
           >
-            Hire Me
+            {navigationContent.hireMeText}
           </a>
         </div>
       </div>

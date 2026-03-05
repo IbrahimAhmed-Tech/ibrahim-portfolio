@@ -1,43 +1,15 @@
 import { useEffect, useRef, useState } from "react";
-import { Rocket, Cloud, Smartphone, Settings, Code, Sprout, LucideIcon } from "lucide-react";
+import { Rocket, Smartphone, Settings, Code, Sprout, LucideIcon } from "lucide-react";
+import { journeyData, journeySection } from "@/content";
 
-const journeyData: Array<{
-  year: string;
-  title: string;
-  description: string;
-  icon: LucideIcon;
-}> = [
-  {
-    year: "2025",
-    title: "Mobile & Cloud Development",
-    description: "Started working on React Native, AWS and relevant cloud technologies, expanding into cross-platform mobile development.",
-    icon: Smartphone,
-  },
-  {
-    year: "2024",
-    title: "Desktop Application Development",
-    description: "Started working on VB6 and VB.NET, building enterprise desktop applications and Windows-based solutions.",
-    icon: Code,
-  },
-  {
-    year: "2023 March",
-    title: "First Professional Role",
-    description: "Joined my first job and started working on PHP Laravel and SQL Server, diving into enterprise backend development.",
-    icon: Rocket,
-  },
-  {
-    year: "2023 Jan",
-    title: "MERN Stack Developer",
-    description: "Started working on MERN stack (MongoDB, Express, React, Node.js), building full-stack web applications.",
-    icon: Settings,
-  },
-  {
-    year: "2022",
-    title: "Started the Journey",
-    description: "Began with C++ programming, learning fundamentals and building a strong foundation in software development.",
-    icon: Sprout,
-  },
-];
+// Icon mapping
+const iconMap: Record<string, LucideIcon> = {
+  Smartphone,
+  Code,
+  Rocket,
+  Settings,
+  Sprout,
+};
 
 const Journey = () => {
   const journeyRef = useRef<HTMLElement>(null);
@@ -76,10 +48,10 @@ const Journey = () => {
 
       <div className="container mx-auto max-w-6xl relative z-10">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
-          <span className="gradient-text">My Journey</span>
+          <span className="gradient-text">{journeySection.title}</span>
         </h2>
         <p className="text-center text-muted-foreground mb-20 max-w-2xl mx-auto">
-          From passionate beginner to experienced full-stack developer - here's how I've grown over the years.
+          {journeySection.description}
         </p>
 
         <div className="relative">
@@ -124,7 +96,10 @@ const Journey = () => {
                     
                     <div className="flex items-start gap-3 md:gap-4 flex-1">
                       <div className="p-2 md:p-3 rounded-lg bg-primary/10 group-hover:bg-primary/20 transition-colors duration-300 shrink-0">
-                        <item.icon className="w-5 h-5 md:w-6 md:h-6 text-primary group-hover:scale-125 transition-transform duration-300" />
+                        {(() => {
+                          const IconComponent = iconMap[item.icon];
+                          return IconComponent ? <IconComponent className="w-5 h-5 md:w-6 md:h-6 text-primary group-hover:scale-125 transition-transform duration-300" /> : null;
+                        })()}
                       </div>
                       <div className="flex-1 min-w-0">
                         <h3 className="text-lg md:text-2xl font-bold mb-1 md:mb-2 group-hover:gradient-text transition-all duration-300">

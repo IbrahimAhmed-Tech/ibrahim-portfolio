@@ -1,19 +1,5 @@
 import { useEffect, useRef } from "react";
-
-const skills = [
-  { name: "MongoDB", category: "Database" },
-  { name: "Express.js", category: "Backend" },
-  { name: "React", category: "Frontend" },
-  { name: "Node.js", category: "Backend" },
-  { name: "AWS", category: "Cloud" },
-  { name: "React Native", category: "Mobile" },
-  { name: "Expo", category: "Mobile" },
-  { name: "SQL Server", category: "Database" },
-  { name: "PostgreSQL", category: "Database" },
-  { name: "Laravel", category: "Backend" },
-  { name: "PHP", category: "Backend" },
-  { name: "TypeScript", category: "Language" },
-];
+import { skills, skillsSection } from "@/content";
 
 const Skills = () => {
   const skillsRef = useRef<HTMLElement>(null);
@@ -46,11 +32,10 @@ const Skills = () => {
     <section id="skills" ref={skillsRef} className="py-20 px-4">
       <div className="container mx-auto max-w-6xl">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
-          <span className="gradient-text">Tech Stack</span>
+          <span className="gradient-text">{skillsSection.title}</span>
         </h2>
         <p className="text-center text-muted-foreground mb-16 max-w-2xl mx-auto">
-          Proficient in modern technologies and frameworks, delivering robust solutions
-          from frontend to backend, mobile to cloud.
+          {skillsSection.description}
         </p>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">

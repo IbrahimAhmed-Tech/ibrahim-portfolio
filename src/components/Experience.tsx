@@ -1,27 +1,5 @@
 import { useEffect, useRef } from "react";
-
-const experiences = [
-  {
-    title: "Full Stack Development",
-    description: "Building scalable web applications using MERN stack with focus on performance and user experience.",
-    technologies: ["MongoDB", "Express", "React", "Node.js"],
-  },
-  {
-    title: "Cloud Infrastructure",
-    description: "Architecting and deploying cloud-native applications on AWS with serverless and containerized solutions.",
-    technologies: ["AWS", "Lambda", "EC2", "S3", 'RDS', 'VPC', 'Cognito'],
-  },
-  {
-    title: "Mobile Development",
-    description: "Creating cross-platform mobile applications using React Native and Expo for iOS and Android.",
-    technologies: ["React Native", "Expo", "TypeScript"],
-  },
-  {
-    title: "Backend Engineering",
-    description: "Developing robust APIs and backend systems with Laravel, PHP, and managing SQL databases.",
-    technologies: ["Laravel", "PHP", "PostgreSQL", "SQL Server"],
-  },
-];
+import { experiences, experienceSection } from "@/content";
 
 const Experience = () => {
   const experienceRef = useRef<HTMLElement>(null);
@@ -54,10 +32,10 @@ const Experience = () => {
     <section id="experience" ref={experienceRef} className="py-20 px-4 gradient-bg">
       <div className="container mx-auto max-w-6xl">
         <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
-          <span className="gradient-text">Expertise</span>
+          <span className="gradient-text">{experienceSection.title}</span>
         </h2>
         <p className="text-center text-muted-foreground mb-16 max-w-2xl mx-auto">
-          Comprehensive experience across the full development lifecycle, from concept to deployment.
+          {experienceSection.description}
         </p>
 
         <div className="grid md:grid-cols-2 gap-8">

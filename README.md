@@ -1,10 +1,10 @@
-# Zyam Maqsood — Portfolio
+# Ibrahim Ahmed — Portfolio
 
 Personal portfolio built with Vite, React and TypeScript. This repository contains the source for my portfolio site and demo components.
 
 ## Author
 
-Zyam Maqsood
+Ibrahim Ahmed
 
 ## Quick start
 
