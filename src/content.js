@@ -14,7 +14,8 @@ export const heroContent = {
   name: personalInfo.name,
   title: personalInfo.title,
   description:
-".NET Engineer building enterprise applications with C# and ASP.NET. Specializes in legacy system modernization, production support, and robust backend solutions using SQL Server and VB.NET."  buttons: {
+".NET Engineer building enterprise applications with C# and ASP.NET. Specializes in legacy system modernization, production support, and robust backend solutions using SQL Server and VB.NET." ,
+ buttons: {
     getInTouch: {
       text: "Get in Touch",
       href: "#contact",
