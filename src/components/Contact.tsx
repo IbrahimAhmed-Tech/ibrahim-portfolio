@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import { contactSection } from "@/content";
 import { FiMail, FiGithub } from "react-icons/fi";
+import { FaLinkedin } from "react-icons/fa";
 
 const Contact = () => {
   const contactRef = useRef<HTMLElement>(null);
@@ -45,21 +46,30 @@ const Contact = () => {
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href={contactSection.buttons.sendEmail.href}
+              href="mailto:ibrahimahmed9578@gmail.com"
               className="px-8 py-4 rounded-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold flex items-center justify-center gap-2 transition-all hover:scale-105"
             >
               <FiMail size={20} />
-              {contactSection.buttons.sendEmail.text}
+              Send Email
             </a>
 
             <a
-              href={contactSection.buttons.viewGitHub.href}
+              href="https://github.com/IbrahimAhmed-Tech"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 rounded-full glass hover:bg-white/10 font-semibold flex items-center justify-center gap-2 transition-all hover:scale-105"
             >
               <FiGithub size={20} />
-              {contactSection.buttons.viewGitHub.text}
+              View GitHub
+            </a>
+            <a
+              href="https://www.linkedin.com/in/ibrahim-ahmed-i/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-8 py-4 rounded-full glass hover:bg-white/10 font-semibold flex items-center justify-center gap-2 transition-all hover:scale-105"
+            >
+              <FaLinkedin  size={20} />
+              View LinkedIn
             </a>
           </div>
         </div>

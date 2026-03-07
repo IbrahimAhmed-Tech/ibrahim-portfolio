@@ -22,7 +22,8 @@ const Navigation = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
           <a href="#home" className="text-xl font-bold gradient-text">
-            {personalInfo.portfolioTitle}
+            {/* {personalInfo.portfolioTitle} */}
+            
           </a>
 
           <div className="hidden md:flex items-center gap-8">

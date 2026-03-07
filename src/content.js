@@ -1,11 +1,13 @@
 // Centralized content data for the portfolio
+import profileImage from "../src/assets/ibrahimprofile.png";
 
 export const personalInfo = {
   name: "Ibrahim Ahmed",
   title:
-    ".NET Engineer | ASP.NET & C# Specialist | Legacy System Modernization | Enterprise Applications",
+".NET Engineer | ASP.NET & C# Specialist",
   email: "ibrahimahmed9578@gmail.com",
-  github: "https://github.com/IbrahimAhmed",
+  github: "https://github.com/IbrahimAhmed-Tech",
+  linkedin: "https://www.linkedin.com/in/ibrahim-ahmed-i/",
   portfolioTitle: "Portfolio",
 };
 
@@ -13,8 +15,8 @@ export const heroContent = {
   greeting: "Hi, I'm",
   name: personalInfo.name,
   title: personalInfo.title,
-  description:
-".NET Engineer building enterprise applications with C# and ASP.NET. Specializes in legacy system modernization, production support, and robust backend solutions using SQL Server and VB.NET." ,
+  description:"I build scalable enterprise applications using C# and ASP.NET, with experience in maintaining and modernizing legacy systems and delivering reliable backend solutions with SQL Server.",
+  image: profileImage,
  buttons: {
     getInTouch: {
       text: "Get in Touch",
@@ -184,14 +186,13 @@ export const contactSection = {
     "If your organization needs a Senior .NET Engineer to tackle complex legacy systems, optimize critical production environments, or deliver robust enterprise applications, I can provide expertise and solutions that drive results.",
   buttons: {
     sendEmail: {
-      text: "Send Email",
       href: `mailto:${personalInfo.email}`,
-      icon: "Mail",
     },
     viewGitHub: {
-      text: "View GitHub",
       href: personalInfo.github,
-      icon: "GitHub", 
+    },
+    viewLinkedIn: {
+      href: personalInfo.linkedin, 
     },
   },
 };
