@@ -1,6 +1,13 @@
 // Centralized content data for the portfolio
 import profileImage from "../src/assets/ibrahimprofile.png";
-
+import VMSimage1 from "../src/assets/VMSimage1.png";
+import VMSimage2 from "../src/assets/VMSimage2.png";
+import VMSimage3 from "../src/assets/VMSimage3.png";
+import VMSimage4 from "../src/assets/VMSimage4.png";
+import ISGimage1 from "../src/assets/ISGimage1.png";
+import ISGimage2 from "../src/assets/ISGimage2.png";
+import ISGimage3 from "../src/assets/ISGimage3.png";
+import ISGimage4 from "../src/assets/ISGimage4.png";
 export const personalInfo = {
   name: "Ibrahim Ahmed",
   title:
@@ -97,35 +104,32 @@ export const experienceSection = {
 };
 
 export const projects = [
+
   {
-    title: "Bera Memes",
+    title: "VISION ISG Claims Management System",
     description:
-      "A full-stack meme platform built with the MERN stack that allows users to browse, search, and post memes using trending tags and predefined categories, with a responsive and engaging UI.",
-    stack: ["MongoDB", "Express.js", "React.js", "Node.js", "Tailwind CSS"],
-    url: "https://www.beramemes.com/",
+      "Enterprise ASP.NET MVC claims management platform supporting the full lifecycle of vehicle incidents across UK operations. I Resolved critical VAT calculation defects affecting Xero invoice exports, stabilized fleet data import pipelines, and led integration of a third-party fleet platform via REST APIs to replace legacy SFTP workflows. I Maintain and enhance a high-traffic production system ensuring reliability and continuous business operations.",
+    stack: ["C#", "ASP.NET MVC", "ASP.NET Web API", "Microsoft SQL Server", "REST APIs"],
+    timeframe: "Sep 2025 – Present",
+    url: "https://www.isgvision.co.uk/ISGVision/",
+    images:[ISGimage1, ISGimage2, ISGimage3, ISGimage4],
   },
+
   {
-    title: "Bee Hive",
+    title: "VMS Fleet Manager",
     description:
-      "A professional software company landing page built with React and Tailwind CSS, featuring responsive design and EmailJS integration for seamless client communication.",
-    stack: ["React.js", "Tailwind CSS", "EmailJS"],
-    url: "sample data",
+      "API-first enterprise fleet operations platform managing vehicle lifecycle processes including incidents, maintenance, financials, and compliance. I improved role-based access control across SQL Server databases, implemented financial reporting modules, optimized database queries, and contributed to modernization of APIs for improved scalability and performance.",
+    stack: ["C#", "ASP.NET Web API", "Microsoft SQL Server", "Angular", "SSRS", "JWT Authentication"],
+    timeframe: "Sep 2025 – Present",
+    url: "https://fleetmanager.vmsglobal.co.uk/",
+    images: [
+      VMSimage1,
+      VMSimage2,
+      VMSimage3,
+      VMSimage4,
+    ],
   },
-  {
-    title: "Property Management System",
-    description:
-      "A MERN-based tenant and tax management application with dashboards for tracking tenants, payments, rent, and taxes, featuring secure backend functionality and a user-friendly interface.",
-    stack: ["MongoDB", "Express.js", "React.js", "Node.js", "MUI"],
-    url: "sample data",
-  },
-  {
-    title: "MedAI - AI-Powered Healthcare Consultation System",
-    description:
-      "A healthcare consultation platform using React, Python, and PostgreSQL, integrating ZEGOCLOUD for video/audio calls, secure payments, and robust API-driven workflows.",
-    stack: ["React.js", "Python", "PostgreSQL", "ZEGOCLOUD", "Tailwind CSS"],
-    url: "sample data",
-  },
-  
+
 ];
 
 export const projectsSection = {
@@ -133,7 +137,7 @@ export const projectsSection = {
   description:
     "A selection of enterprise-grade .NET projects demonstrating legacy system modernization, production issue resolution, and robust web and desktop applications built with C#, ASP.NET, and SQL Server.",
   loadMoreText: "Load more projects",
-  viewButtonText: "View",
+  viewButtonText: "View Live",
 };
 
 export const journeyData = [
