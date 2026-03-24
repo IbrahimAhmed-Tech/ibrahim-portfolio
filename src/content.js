@@ -4,10 +4,10 @@ import VMSimage1 from "../src/assets/VMSimage1.png";
 import VMSimage2 from "../src/assets/VMSimage2.png";
 import VMSimage3 from "../src/assets/VMSimage3.png";
 import VMSimage4 from "../src/assets/VMSimage4.png";
-import ISGimage1 from "../src/assets/ISGimage1.png";
-import ISGimage2 from "../src/assets/ISGimage2.png";
-import ISGimage3 from "../src/assets/ISGimage3.png";
-import ISGimage4 from "../src/assets/ISGimage4.png";
+import ISGimage1 from "../src/assets/ISGImage1.png";
+import ISGimage2 from "../src/assets/ISGImage2.png";
+import ISGimage3 from "../src/assets/ISGImage3.png";
+import ISGimage4 from "../src/assets/ISGImage4.png";
 export const personalInfo = {
   name: "Ibrahim Ahmed",
   title:
