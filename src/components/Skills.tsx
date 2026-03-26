@@ -1,65 +1,55 @@
-import { useEffect, useRef } from "react";
+import { motion, useReducedMotion } from "framer-motion";
 import { skills, skillsSection } from "@/content";
+import { revealUp, staggerContainer, staggerItem } from "@/lib/motion";
 
 const Skills = () => {
-  const skillsRef = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            const cards = entry.target.querySelectorAll(".skill-card");
-            cards.forEach((card, index) => {
-              setTimeout(() => {
-                card.classList.add("animate-slide-up");
-              }, index * 100);
-            });
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-
-    if (skillsRef.current) {
-      observer.observe(skillsRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
+  const reduceMotion = useReducedMotion();
 
   return (
-    <section id="skills" ref={skillsRef} className="py-20 px-4">
+    <motion.section
+      id="skills"
+      className="py-20 px-4"
+      variants={revealUp}
+      initial={reduceMotion ? false : "hidden"}
+      whileInView="show"
+      viewport={{ once: true, amount: 0.2 }}
+    >
       <div className="container mx-auto max-w-6xl">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-4">
-          <span className="gradient-text">{skillsSection.title}</span>
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-4 heading-primary">
+          {skillsSection.title}
         </h2>
         <p className="text-center text-muted-foreground mb-16 max-w-2xl mx-auto">
           {skillsSection.description}
         </p>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {skills.map((skill, index) => (
-            <div
+        <motion.div
+          className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 md:gap-6"
+          variants={staggerContainer}
+          initial={reduceMotion ? false : "hidden"}
+          whileInView="show"
+          viewport={{ once: true, amount: 0.2 }}
+        >
+          {skills.map((skill) => (
+            <motion.div
               key={skill.name}
               className="skill-card group relative"
-              style={{ 
-                opacity: 0,
-                animation: `slideUp 0.8s ease-out ${index * 0.1}s forwards`
-              }}
+              variants={staggerItem}
             >
-              <div className="glass rounded-2xl p-6 h-full transition-all duration-300 hover:scale-105 hover:bg-white/10">
+              <div className="glass rounded-2xl p-5 md:p-6 h-full transition-all duration-300 hover:-translate-y-1 hover:bg-white/10">
                 <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-primary/20 to-secondary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                 <div className="relative z-10">
-                  <h3 className="text-lg font-semibold mb-2">{skill.name}</h3>
-                  <p className="text-sm text-muted-foreground">{skill.category}</p>
+                  <div className="flex items-center gap-3">
+                    <h3 className="text-base md:text-lg font-semibold leading-snug">
+                      {skill.name}
+                    </h3>
+                  </div>
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

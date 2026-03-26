@@ -1,80 +1,73 @@
-import { useEffect, useRef } from "react";
+import { motion, useReducedMotion } from "framer-motion";
 import { contactSection } from "@/content";
 import { FiMail, FiGithub } from "react-icons/fi";
 import { FaLinkedin } from "react-icons/fa";
+import { revealUp, staggerContainer, staggerItem } from "@/lib/motion";
 
 const Contact = () => {
-  const contactRef = useRef<HTMLElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("animate-fade-in");
-          }
-        });
-      },
-      { threshold: 0.1 },
-    );
-
-    if (contactRef.current) {
-      observer.observe(contactRef.current);
-    }
-
-    return () => observer.disconnect();
-  }, []);
+  const reduceMotion = useReducedMotion();
 
   return (
-    <section
+    <motion.section
       id="contact"
-      ref={contactRef}
       className="py-20 px-4"
-      style={{
-        opacity: 0,
-        animation: "fadeIn 0.8s ease-out 0.2s forwards",
-      }}
+      variants={revealUp}
+      initial={reduceMotion ? false : "hidden"}
+      whileInView="show"
+      viewport={{ once: true, amount: 0.2 }}
     >
       <div className="container mx-auto max-w-4xl">
         <div className="gradient-border rounded-3xl p-12 text-center">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6">
-            <span className="gradient-text">{contactSection.title}</span>
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 heading-primary">
+            {contactSection.title}
           </h2>
           <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
             {contactSection.description}
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
+          <motion.div
+            className="flex flex-col sm:flex-row gap-4 justify-center"
+            variants={staggerContainer}
+            initial={reduceMotion ? false : "hidden"}
+            whileInView="show"
+            viewport={{ once: true, amount: 0.2 }}
+          >
+            <motion.a
               href="mailto:ibrahimahmed9578@gmail.com"
-              className="px-8 py-4 rounded-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold flex items-center justify-center gap-2 transition-all hover:scale-105"
+              className="px-8 py-4 rounded-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold flex items-center justify-center gap-2 transition-all hover:shadow-lg"
+              variants={staggerItem}
+              whileHover={reduceMotion ? undefined : { y: -2 }}
             >
               <FiMail size={20} />
               Send Email
-            </a>
+            </motion.a>
 
-            <a
+            <motion.a
               href="https://github.com/IbrahimAhmed-Tech"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-4 rounded-full glass hover:bg-white/10 font-semibold flex items-center justify-center gap-2 transition-all hover:scale-105"
+              className="px-8 py-4 rounded-full border border-primary/30 text-foreground font-semibold flex items-center justify-center gap-2 hover:border-primary/60 hover:bg-white/5 transition-all"
+              variants={staggerItem}
+              whileHover={reduceMotion ? undefined : { y: -2 }}
             >
               <FiGithub size={20} />
               View GitHub
-            </a>
-            <a
+            </motion.a>
+            <motion.a
               href="https://www.linkedin.com/in/ibrahim-ahmed-i/"
               target="_blank"
               rel="noopener noreferrer"
-              className="px-8 py-4 rounded-full glass hover:bg-white/10 font-semibold flex items-center justify-center gap-2 transition-all hover:scale-105"
+              className="px-8 py-4 rounded-full border border-primary/30 text-foreground font-semibold flex items-center justify-center gap-2 hover:border-primary/60 hover:bg-white/5 transition-all"
+              variants={staggerItem}
+              whileHover={reduceMotion ? undefined : { y: -2 }}
             >
-              <FaLinkedin  size={20} />
+              <FaLinkedin size={20} />
               View LinkedIn
-            </a>
-          </div>
+            </motion.a>
+          </motion.div>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

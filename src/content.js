@@ -142,7 +142,7 @@ export const projectsSection = {
 
 export const journeyData = [
   {
-    year: "2025",
+    year: "2025 - Present",
     title: "Senior .NET Engineer",
     description:
       "Working as a Software Engineer at DevNauts on UK enterprise systems, specializing in ASP.NET, C#, and SQL Server. Leading legacy system modernization, debugging high-impact production issues, and developing mission-critical backend services.",

@@ -17,16 +17,16 @@ All colors MUST be HSL.
     --popover: 240 10% 8%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 263 70% 60%;
+    --primary: 220 90% 56%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 188 94% 42%;
+    --secondary: 220 20% 50%;
     --secondary-foreground: 0 0% 100%;
 
     --muted: 240 5% 25%;
-    --muted-foreground: 240 5% 65%;
+    --muted-foreground: 240 3% 70%;
 
-    --accent: 263 70% 50%;
+    --accent: 220 90% 56%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62.8% 50%;
@@ -34,14 +34,18 @@ All colors MUST be HSL.
 
     --border: 240 10% 15%;
     --input: 240 10% 15%;
-    --ring: 263 70% 60%;
+    --ring: 220 90% 56%;
 
     --radius: 1rem;
 
-    /* Custom gradient colors */
-    --gradient-start: 263 70% 60%;
-    --gradient-mid: 250 70% 55%;
-    --gradient-end: 188 94% 42%;
+    /* Professional heading colors */
+    --heading: 240 6% 88%;
+--heading-secondary: 240 5% 72%;
+    
+    /* Subtle accent colors */
+    --gradient-start: 220 90% 56%;
+    --gradient-mid: 220 70% 60%;
+    --gradient-end: 220 60% 65%;
     
     /* Additional colors for tech stack */
     --tech-bg: 240 10% 12%;
@@ -72,8 +76,20 @@ All colors MUST be HSL.
     background-clip: text;
   }
 
+  /* Professional heading style */
+  .heading-primary {
+    color: hsl(var(--heading));
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+
+  .heading-secondary {
+    color: hsl(var(--heading-secondary));
+    font-weight: 600;
+  }
+
   .gradient-bg {
-    background: linear-gradient(135deg, hsl(var(--gradient-start) / 0.2), hsl(var(--gradient-end) / 0.2));
+    background: linear-gradient(135deg, hsl(var(--gradient-start) / 0.08), hsl(var(--gradient-end) / 0.08));
   }
 
   .gradient-border {
@@ -88,48 +104,45 @@ All colors MUST be HSL.
     inset: 0;
     border-radius: inherit;
     padding: 1px;
-    background: linear-gradient(135deg, hsl(var(--gradient-start)), hsl(var(--gradient-end)));
+    background: linear-gradient(135deg, hsl(var(--gradient-start) / 0.4), hsl(var(--gradient-end) / 0.4));
     -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
     -webkit-mask-composite: xor;
     mask-composite: exclude;
     pointer-events: none;
   }
 
-  /* Animation utilities */
-  .fade-in {
-    animation: fadeIn 0.8s ease-in-out;
-  }
-
-  .slide-up {
-    animation: slideUp 0.8s ease-out;
-  }
-
-  @keyframes fadeIn {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
-  }
-
-  @keyframes slideUp {
-    from {
-      opacity: 0;
-      transform: translateY(30px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
+  /* Skills icon dot */
+  .skill-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 999px;
+    background: linear-gradient(
+      135deg,
+      hsl(var(--gradient-start)),
+      hsl(var(--gradient-mid)),
+      hsl(var(--gradient-end))
+    );
+    box-shadow:
+      0 0 0 3px hsl(var(--background) / 0.35),
+      0 0 18px hsl(var(--primary) / 0.35);
+    flex: 0 0 auto;
   }
 
   /* Glassmorphism effect */
   .glass {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(255, 255, 255, 0.06);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+  }
+
+  /* Professional button style */
+  .btn-primary {
+    @apply px-8 py-3 rounded-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold transition-all hover:shadow-lg;
+  }
+
+  .btn-secondary {
+    @apply px-8 py-3 rounded-full border border-primary/30 text-foreground font-semibold hover:border-primary/60 hover:bg-white/5 transition-all;
   }
 }
 

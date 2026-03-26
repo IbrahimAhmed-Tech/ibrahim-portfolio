@@ -1,24 +1,27 @@
 import { useState } from "react";
+import { motion, useReducedMotion } from "framer-motion";
+import { staggerItem } from "@/lib/motion";
 
-export function ProjectCard({ project, index, projectsSection, handleView }) {
+export function ProjectCard({ project, projectsSection, handleView }) {
   const [activeImage, setActiveImage] = useState(0);
+  const reduceMotion = useReducedMotion();
 
   const prevImage = () =>
-    setActiveImage((prev) => (prev - 1 + project.images.length) % project.images.length);
+    setActiveImage(
+      (prev) => (prev - 1 + project.images.length) % project.images.length,
+    );
 
   const nextImage = () =>
     setActiveImage((prev) => (prev + 1) % project.images.length);
 
   return (
-    <div
+    <motion.div
       className="project-card group relative overflow-hidden rounded-2xl"
-      style={{
-        opacity: 0,
-        animation: `slideUp 0.8s ease-out ${index * 0.12}s forwards`,
-      }}
+      variants={staggerItem}
+      whileHover={reduceMotion ? undefined : { y: -6 }}
+      whileTap={reduceMotion ? undefined : { scale: 0.99 }}
     >
       <div className="glass h-full transition-all duration-300 hover:bg-white/10 relative flex flex-col">
-
         {/* ── Image Carousel ── */}
         {project.images?.length > 0 && (
           <div className="relative w-full h-48 overflow-hidden rounded-t-2xl">
@@ -42,16 +45,12 @@ export function ProjectCard({ project, index, projectsSection, handleView }) {
               onClick={prevImage}
               className="absolute left-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-black/40 hover:bg-black/70 flex items-center justify-center text-white transition-all duration-200 opacity-0 group-hover:opacity-100"
               aria-label="Previous image"
-            >
-              ‹
-            </button>
+            ></button>
             <button
               onClick={nextImage}
               className="absolute right-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-black/40 hover:bg-black/70 flex items-center justify-center text-white transition-all duration-200 opacity-0 group-hover:opacity-100"
               aria-label="Next image"
-            >
-              ›
-            </button>
+            ></button>
 
             {/* Dot indicators */}
             <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1.5">
@@ -74,11 +73,12 @@ export function ProjectCard({ project, index, projectsSection, handleView }) {
         {/* ── Card Content ── */}
         <div className="relative z-10 flex flex-col flex-1 p-8">
           {/* Decorative corner blob */}
-          {/* <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-primary/30 to-secondary/30 rounded-bl-full -mr-16 -mt-16 group-hover:scale-150 transition-transform duration-500 pointer-events-none" /> */}
 
           {/* Title & description */}
           <h3 className="text-2xl font-bold mb-3">{project.title}</h3>
-          <p className="text-muted-foreground mb-5 flex-1">{project.description}</p>
+          <p className="text-muted-foreground mb-5 flex-1">
+            {project.description}
+          </p>
 
           {/* Tech stack */}
           <div className="flex flex-wrap gap-2 mb-5">
@@ -94,20 +94,18 @@ export function ProjectCard({ project, index, projectsSection, handleView }) {
 
           {/* Bottom row: timeframe + view button */}
           <div className="flex items-center justify-between pt-4 border-t border-white/10">
-            <span className="text-sm text-muted-foreground">{project.timeframe}</span>
-
+            <span className="text-sm text-muted-foreground">
+              {project.timeframe}
+            </span>
             <button
               onClick={() => handleView(project)}
-              className="px-4 py-2 rounded-full font-semibold shadow-lg transform transition-all duration-300 bg-white/6 hover:bg-white/10 hover:scale-105"
+              className="px-4 py-2 rounded-full font-semibold text-primary hover:text-primary/80 border border-primary/30 hover:border-primary/60 transition-all"
             >
-              <span className="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 bg-clip-text text-transparent">
-                {projectsSection.viewButtonText}
-              </span>
+              {projectsSection.viewButtonText}
             </button>
           </div>
         </div>
-
       </div>
-    </div>
+    </motion.div>
   );
 }
