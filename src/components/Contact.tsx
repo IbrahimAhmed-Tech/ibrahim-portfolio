@@ -43,7 +43,7 @@ const Contact = () => {
             </motion.a>
 
             <motion.a
-              href="https://github.com/IbrahimAhmed-Tech"
+              href="https://github.com/ibrahimahmed-dev"
               target="_blank"
               rel="noopener noreferrer"
               className="px-8 py-4 rounded-full border border-primary/30 text-foreground font-semibold flex items-center justify-center gap-2 hover:border-primary/60 hover:bg-white/5 transition-all"

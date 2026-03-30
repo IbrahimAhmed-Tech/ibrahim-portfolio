@@ -13,7 +13,7 @@ export const personalInfo = {
   title:
 ".NET Engineer | ASP.NET & C# Specialist",
   email: "ibrahimahmed9578@gmail.com",
-  github: "https://github.com/IbrahimAhmed-Tech",
+  github: "https://github.com/ibrahimahmed-dev",
   linkedin: "https://www.linkedin.com/in/ibrahim-ahmed-i/",
   portfolioTitle: "Portfolio",
 };
