@@ -8,29 +8,29 @@ import ISGimage1 from "../src/assets/ISGImage1.png";
 import ISGimage2 from "../src/assets/ISGImage2.png";
 import ISGimage3 from "../src/assets/ISGImage3.png";
 import ISGimage4 from "../src/assets/ISGImage4.png";
+
 export const personalInfo = {
   name: "Ibrahim Ahmed",
-  title:
-".NET Engineer | ASP.NET & C# Specialist",
+  title: "Senior .NET Engineer | Backend Architect",
   email: "ibrahimahmed9578@gmail.com",
   github: "https://github.com/ibrahimahmed-dev",
   linkedin: "https://www.linkedin.com/in/ibrahim-ahmed-i/",
-  portfolioTitle: "Portfolio",
+  portfolioTitle: "The Workshop",
 };
 
 export const heroContent = {
-  greeting: "Hi, I'm",
+  greeting: "I am",
   name: personalInfo.name,
   title: personalInfo.title,
-  description:"I build scalable enterprise applications using C# and ASP.NET, with experience in maintaining and modernizing legacy systems and delivering reliable backend solutions with SQL Server.",
+  description: "I build backend infrastructure with the precision of a craftsman and the foresight of a CTO. I specialize in turning architectural chaos into scalable, sustainable systems using C# and the .NET ecosystem.",
   image: profileImage,
- buttons: {
+  buttons: {
     getInTouch: {
-      text: "Get in Touch",
+      text: "Start a Project",
       href: "#contact",
     },
     viewProjects: {
-      text: "View Projects",
+      text: "View My Work",
       href: "#projects",
     },
   },
@@ -38,8 +38,8 @@ export const heroContent = {
 
 export const navigationLinks = [
   { href: "#home", label: "Home" },
-  { href: "#skills", label: "Skills" },
-  { href: "#experience", label: "Experience" },
+  { href: "#skills", label: "The Toolkit" },
+  { href: "#experience", label: "Expertise" },
   { href: "#projects", label: "Projects" },
   { href: "#contact", label: "Contact" },
 ];
@@ -56,16 +56,14 @@ export const skills = [
 ];
 
 export const skillsSection = {
-  title: "Technology Stack",
-  description:
-    "Specialized in the Microsoft .NET ecosystem, building and maintaining enterprise-grade applications with C#, ASP.NET, and SQL Server. Experienced in modernizing legacy systems, designing secure APIs, and stabilizing complex production environments.",
+  title: "The Toolkit",
+  description: "I am a specialist in the Microsoft .NET ecosystem, focused on enterprise grade applications that survive the test of time. My approach centers on modularity and clean architecture, ensuring that every line of code adds long term value to the business.",
 };
 
 export const experiences = [
   {
-    title: ".NET Web & Desktop Applications",
-    description:
-      "Building and maintaining enterprise-grade .NET applications, including ASP.NET web apps and desktop solutions. Specialized in modernizing legacy VB.NET and VB6 systems, stabilizing production environments, and delivering reliable, high-performance software for mission-critical business operations.",
+    title: "Legacy Recovery and Modernization",
+    description: "I am the engineer you call when your core systems are a mystery. I specialize in reverse engineering legacy VB6 and VB.NET environments to recover lost business logic and migrate it into modern, high performance C# architectures.",
     technologies: [
       "C#",
       "ASP.NET",
@@ -78,116 +76,83 @@ export const experiences = [
     ],
   },
   {
-    title: "Enterprise Web & API Development",
-    description:
-      "Designing and implementing secure and scalable ASP.NET web applications and RESTful APIs. Handling complex authorization logic, third-party integrations, and financial reporting modules in production systems.",
+    title: "Accountable API Development",
+    description: "Designing secure, scalable RESTful APIs with a focus on radical transparency. I work in precise baby steps, providing clients with exact delivery milestones and ensuring every integration is documented for the developers who come after me.",
     technologies: ["C#", "ASP.NET", "ASP.NET MVC", "REST APIs", "SQL Server"],
   },
   {
-    title: "Legacy System Modernization",
-    description:
-      "Using C# and .NET technologies to modernize aging VB.NET and VB6 enterprise systems. Refactor complex codebases, resolve deep-rooted issues, and improve maintainability while ensuring uninterrupted business operations.",
-    technologies: ["C#", "VB.NET", "VB6", ".NET Framework", "SQL Server"],
-  },
-  {
-    title: "Production System Stabilization",
-    description:
-      "Leveraging C# and ASP.NET to debug and resolve high-impact production issues in live enterprise environments. Specialized in complex authorization, financial data integrity, and maintaining mission-critical system reliability.",
+    title: "Enterprise System Stabilization",
+    description: "I fix the high impact production issues that stall business growth. My background in sales and marketing allows me to prioritize technical fixes based on their actual Return on Investment and stakeholder impact.",
     technologies: ["C#", "ASP.NET", "ASP.NET MVC", "SQL Server", "REST APIs"],
   },
 ];
 
 export const experienceSection = {
-  title: "Expertise",
-  description:
-    "Specialized in building, stabilizing, and modernizing enterprise .NET applications. Experienced in resolving complex production issues, maintaining legacy systems, and developing reliable backend services using C#, ASP.NET, and SQL Server.",
+  title: "Core Expertise",
+  description: "Code is a liability unless it is clean, documented, and scalable. I focus on building backend solutions that minimize technical debt and maximize system reliability for mission critical operations.",
 };
 
 export const projects = [
-
   {
-    title: "VISION ISG Claims Management System",
-    description:
-      "Enterprise ASP.NET MVC claims management platform supporting the full lifecycle of vehicle incidents across UK operations. I Resolved critical VAT calculation defects affecting Xero invoice exports, stabilized fleet data import pipelines, and led integration of a third-party fleet platform via REST APIs to replace legacy SFTP workflows. I Maintain and enhance a high-traffic production system ensuring reliability and continuous business operations.",
+    title: "VISION ISG Claims Management",
+    description: "An enterprise platform managing vehicle incidents across the UK. I stepped in to stabilize critical financial defects in Xero invoice exports and replaced outdated SFTP workflows with modern REST APIs, restoring client trust through technical precision.",
     stack: ["C#", "ASP.NET MVC", "ASP.NET Web API", "Microsoft SQL Server", "REST APIs"],
-    timeframe: "Sep 2025 – Present",
+    timeframe: "September 2025 to Present",
     url: "https://www.isgvision.co.uk/ISGVision/",
-    images:[ISGimage1, ISGimage2, ISGimage3, ISGimage4],
+    images: [ISGimage1, ISGimage2, ISGimage3, ISGimage4],
   },
-
   {
     title: "VMS Fleet Manager",
-    description:
-      "API-first enterprise fleet operations platform managing vehicle lifecycle processes including incidents, maintenance, financials, and compliance. I improved role-based access control across SQL Server databases, implemented financial reporting modules, optimized database queries, and contributed to modernization of APIs for improved scalability and performance.",
+    description: "An API first operations platform where I modernized role based access control and financial reporting. I optimized database queries for production scale, ensuring the system met the high performance standards of the CTO and stakeholders.",
     stack: ["C#", "ASP.NET Web API", "Microsoft SQL Server", "Angular", "SSRS", "JWT Authentication"],
-    timeframe: "Sep 2025 – Present",
+    timeframe: "September 2025 to Present",
     url: "https://fleetmanager.vmsglobal.co.uk/",
-    images: [
-      VMSimage1,
-      VMSimage2,
-      VMSimage3,
-      VMSimage4,
-    ],
+    images: [VMSimage1, VMSimage2, VMSimage3, VMSimage4],
   },
-
 ];
 
 export const projectsSection = {
   title: "Featured Projects",
-  description:
-    "A selection of enterprise-grade .NET projects demonstrating legacy system modernization, production issue resolution, and robust web and desktop applications built with C#, ASP.NET, and SQL Server.",
-  loadMoreText: "Load more projects",
-  viewButtonText: "View Live",
+  description: "A selection of high stakes .NET projects where I converted complex requirements into stable, production ready assets.",
+  loadMoreText: "View More Work",
+  viewButtonText: "Launch App",
 };
 
 export const journeyData = [
   {
-    year: "2025 - Present",
-    title: "Senior .NET Engineer",
-    description:
-      "Working as a Software Engineer at DevNauts on UK enterprise systems, specializing in ASP.NET, C#, and SQL Server. Leading legacy system modernization, debugging high-impact production issues, and developing mission-critical backend services.",
+    year: "2025 to Present",
+    title: "The Senior Tier",
+    description: "Leading modernization efforts for UK enterprise systems at DevNauts. I focus on high impact production stabilization and building backend services that are easy for future teams to maintain.",
     icon: "Rocket",
   },
   {
     year: "2024",
-    title: ".NET Web & Desktop Development",
-    description:
-      "Developed enterprise .NET desktop and web applications, modernizing VB6 and VB.NET systems, implementing secure REST APIs, and ensuring reliability in production environments.",
+    title: "Full Stack Precision",
+    description: "Developing desktop and web solutions with a focus on secure REST APIs. I moved from simply writing code to architecting systems that solve specific business problems.",
     icon: "Code",
   },
   {
     year: "2023",
-    title: "Legacy System Projects",
-    description:
-      "Worked on healthcare and enterprise systems, reverse-engineering modules, migrating legacy VB6 systems to VB.NET, and stabilizing critical production applications.",
+    title: "Legacy Archeology",
+    description: "Recovering lost codebases and migrating healthcare systems. I proved that even without original source code, a system can be reverse engineered and modernized through disciplined engineering.",
     icon: "Settings",
   },
   {
-    year: "2022",
-    title: "Enterprise .NET Foundations",
-    description:
-      "Built foundational skills in C#, ASP.NET, and SQL Server while contributing to real-world projects involving backend logic, database management, and application stability.",
-    icon: "Sprout",
-  },
-  {
-    year: "2019",
-    title: "Started Computer Science Degree",
-    description:
-      "Began BSCS at PakAims Lahore, developing strong programming fundamentals and laying the groundwork for a career in enterprise .NET engineering.",
+    year: "2019 to 2022",
+    title: "Foundations of Engineering",
+    description: "Built a deep understanding of C# and SQL Server while completing my degree. I focused on the fundamentals that allow for clean, scalable code in the enterprise space.",
     icon: "GraduationCap",
   },
 ];
 
 export const journeySection = {
-  title: "My Journey",
-  description:
-    "From early .NET projects to leading enterprise system modernization and production stabilization, I’ve grown into a Senior .NET Engineer specializing in C#, ASP.NET, and complex legacy systems for mission-critical environments.",
+  title: "The Evolution",
+  description: "My journey is defined by a transition from a coder to a strategist. I don't just build features, I build long term technical solutions.",
 };
 
 export const contactSection = {
-  title: "Let's Work Together",
-  description:
-    "If your organization needs a Senior .NET Engineer to tackle complex legacy systems, optimize critical production environments, or deliver robust enterprise applications, I can provide expertise and solutions that drive results.",
+  title: "Secure Your Infrastructure",
+  description: "If your systems are hitting a ceiling or your legacy code has become a liability, I am ready to step in. I provide exact delivery milestones and a level of technical accountability that ensures your business stays ahead of the curve.",
   buttons: {
     sendEmail: {
       href: `mailto:${personalInfo.email}`,
@@ -202,6 +167,6 @@ export const contactSection = {
 };
 
 export const navigationContent = {
-  hireMeText: "Hire Me",
+  hireMeText: "Consult the Engineer",
   hireMeHref: "#contact",
 };

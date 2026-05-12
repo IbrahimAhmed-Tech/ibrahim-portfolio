@@ -2,6 +2,7 @@ import { useRef, useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import { projects, projectsSection } from "@/content";
 import { ProjectCard } from "./ProjectCard";
+import { Button } from "@/components/ui/button";
 import { revealUp, staggerContainer } from "@/lib/motion";
 
 const Projects = () => {
@@ -53,12 +54,13 @@ const Projects = () => {
 
         {projects.length > visibleCount && (
           <div className="mt-10 text-center">
-            <button
+            <Button
               onClick={() => setVisibleCount(projects.length)}
-              className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold shadow-lg hover:shadow-xl transition-all"
+              variant="default"
+              size="lg"
             >
               {projectsSection.loadMoreText}
-            </button>
+            </Button>
           </div>
         )}
       </div>

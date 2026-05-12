@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { motion, useReducedMotion } from "framer-motion";
 import { staggerItem } from "@/lib/motion";
+import { Button } from "@/components/ui/button";
 
 export function ProjectCard({ project, projectsSection, handleView }) {
   const [activeImage, setActiveImage] = useState(0);
@@ -41,24 +42,38 @@ export function ProjectCard({ project, projectsSection, handleView }) {
             <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
 
             {/* Prev / Next buttons */}
-            <button
+            <Button
               onClick={prevImage}
-              className="absolute left-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-black/40 hover:bg-black/70 flex items-center justify-center text-white transition-all duration-200 opacity-0 group-hover:opacity-100"
+              variant="ghost"
+              size="icon"
+              className="absolute left-2 top-1/2 -translate-y-1/2 bg-slate-950/70 text-white opacity-0 group-hover:opacity-100 hover:bg-slate-950/90"
               aria-label="Previous image"
-            ></button>
-            <button
+            >
+              <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2" className="h-4 w-4">
+                <path d="M12 4 6 10l6 6" />
+              </svg>
+            </Button>
+            <Button
               onClick={nextImage}
-              className="absolute right-2 top-1/2 -translate-y-1/2 w-7 h-7 rounded-full bg-black/40 hover:bg-black/70 flex items-center justify-center text-white transition-all duration-200 opacity-0 group-hover:opacity-100"
+              variant="ghost"
+              size="icon"
+              className="absolute right-2 top-1/2 -translate-y-1/2 bg-slate-950/70 text-white opacity-0 group-hover:opacity-100 hover:bg-slate-950/90"
               aria-label="Next image"
-            ></button>
+            >
+              <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2" className="h-4 w-4">
+                <path d="M8 4 14 10 8 16" />
+              </svg>
+            </Button>
 
             {/* Dot indicators */}
             <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1.5">
               {project.images.map((_, i) => (
-                <button
+                <Button
                   key={i}
                   onClick={() => setActiveImage(i)}
-                  className={`w-1.5 h-1.5 rounded-full transition-all duration-300 ${
+                  variant="ghost"
+                  size="dot"
+                  className={`transition-all duration-300 ${
                     i === activeImage
                       ? "bg-white w-4"
                       : "bg-white/50 hover:bg-white/80"
@@ -97,12 +112,16 @@ export function ProjectCard({ project, projectsSection, handleView }) {
             <span className="text-sm text-muted-foreground">
               {project.timeframe}
             </span>
-            <button
+            <Button
               onClick={() => handleView(project)}
-              className="px-4 py-2 rounded-full font-semibold text-primary hover:text-primary/80 border border-primary/30 hover:border-primary/60 transition-all"
+              variant="outline"
+              className="rounded-full"
             >
               {projectsSection.viewButtonText}
-            </button>
+              <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" strokeWidth="2" className="h-4 w-4">
+                <path d="M7 4 13 10l-6 6" />
+              </svg>
+            </Button>
           </div>
         </div>
       </div>

@@ -68,14 +68,14 @@ const Hero = () => {
             <motion.div className="flex flex-wrap gap-4 justify-center md:justify-start pt-8" variants={staggerItem}>
               <a
                 href={heroContent.buttons.getInTouch.href}
-                className="px-8 py-3 rounded-full bg-primary hover:bg-primary/90 text-primary-foreground font-semibold transition-all hover:shadow-lg"
+                className="px-8 py-3 rounded-lg bg-primary hover:bg-primary/90 text-gray-200 font-semibold transition-all hover:shadow-lg"
               >
                 {heroContent.buttons.getInTouch.text}
               </a>
 
               <a
                 href={heroContent.buttons.viewProjects.href}
-                className="px-8 py-3 rounded-full border border-primary/30 text-foreground font-semibold hover:border-primary/60 hover:bg-white/5 transition-all"
+                className="px-8 py-3 rounded-lg border border-primary/30 text-foreground font-semibold hover:border-primary/60 hover:bg-white/5 transition-all"
               >
                 {heroContent.buttons.viewProjects.text}
               </a>

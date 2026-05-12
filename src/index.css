@@ -17,16 +17,16 @@ All colors MUST be HSL.
     --popover: 240 10% 8%;
     --popover-foreground: 0 0% 98%;
 
-    --primary: 220 90% 56%;
+    --primary: 183 70% 42%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 220 20% 50%;
+    --secondary: 187 15% 58%;
     --secondary-foreground: 0 0% 100%;
 
     --muted: 240 5% 25%;
     --muted-foreground: 240 3% 70%;
 
-    --accent: 220 90% 56%;
+    --accent: 183 65% 48%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62.8% 50%;
@@ -34,7 +34,7 @@ All colors MUST be HSL.
 
     --border: 240 10% 15%;
     --input: 240 10% 15%;
-    --ring: 220 90% 56%;
+    --ring: 183 70% 42%;
 
     --radius: 1rem;
 
@@ -43,9 +43,9 @@ All colors MUST be HSL.
 --heading-secondary: 240 5% 72%;
     
     /* Subtle accent colors */
-    --gradient-start: 220 90% 56%;
-    --gradient-mid: 220 70% 60%;
-    --gradient-end: 220 60% 65%;
+    --gradient-start: 183 70% 42%;
+    --gradient-mid: 183 60% 50%;
+    --gradient-end: 183 45% 60%;
     
     /* Additional colors for tech stack */
     --tech-bg: 240 10% 12%;
